@@ -83,7 +83,7 @@ $(function () {
   }
 
   function setLang(lang) {
-    var dict = translations[lang] || translations.id;
+    var dict = translations[lang] || translations.en;
 
     $('[data-i18n]').each(function () {
       var key = $(this).data('i18n');
@@ -131,5 +131,5 @@ $(function () {
   $(window).on('scroll resize', checkReveal);
   checkReveal();
 
-  setLang(getSavedLang() || 'id');
+  setLang(getSavedLang() || 'en');
 });
