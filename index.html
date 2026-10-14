@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lambar Kreatif</title>
+  <meta name="description" content="Lambar Kreatif - Studio digital kreatif dan pengembangan software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">lambar<span class="dot">.</span>kreatif</a>
+      <nav class="menu" id="menu">
+        <a href="#about" data-i18n="nav_about">Tentang</a>
+        <a href="#services" data-i18n="nav_services">Layanan</a>
+        <a href="#projects" data-i18n="nav_projects">Proyek</a>
+        <a href="#contact" data-i18n="nav_contact">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="id">ID</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <p class="eyebrow"><span class="bar"></span><span data-i18n="hero_eyebrow">Studio Digital Kreatif &amp; Software</span></p>
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_1">Ide kreatif,</span><br>
+        <span data-i18n="hero_title_2">jadi produk digital</span><span class="dot">.</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero_desc">Kami membantu bisnis dan UMKM tumbuh lewat desain, website, dan aplikasi yang sederhana, cepat, dan tepat guna.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-dark" data-i18n="hero_cta_1">Lihat Proyek</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero_cta_2">Mulai Kolaborasi</a>
+      </div>
+    </div>
+    <div class="hero-ornament" aria-hidden="true">
+      <span class="circle"></span>
+      <span class="square"></span>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container grid-2">
+      <div>
+        <p class="section-label">01 — <span data-i18n="about_label">Tentang Kami</span></p>
+        <h2 data-i18n="about_title">Partner digital untuk bisnis yang ingin bergerak lebih cepat.</h2>
+      </div>
+      <div>
+        <p data-i18n="about_p1">Lambar Kreatif adalah startup yang bergerak di bidang digital kreatif dan pengembangan software. Kami menggabungkan desain yang komunikatif dengan teknologi yang andal.</p>
+        <p data-i18n="about_p2">Dari identitas visual hingga aplikasi web, setiap proyek kami kerjakan dengan fokus pada kebutuhan nyata pengguna.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="services">
+    <div class="container">
+      <p class="section-label">02 — <span data-i18n="services_label">Layanan</span></p>
+      <h2 data-i18n="services_title">Apa yang kami kerjakan</h2>
+      <div class="services">
+        <article class="service">
+          <span class="service-num">01</span>
+          <h3 data-i18n="svc1_title">Pengembangan Software</h3>
+          <p data-i18n="svc1_desc">Aplikasi web dan sistem bisnis custom, dari kasir, inventori, hingga dashboard.</p>
+        </article>
+        <article class="service">
+          <span class="service-num">02</span>
+          <h3 data-i18n="svc2_title">Website &amp; Landing Page</h3>
+          <p data-i18n="svc2_desc">Website profil perusahaan dan landing page yang cepat dan responsif.</p>
+        </article>
+        <article class="service">
+          <span class="service-num">03</span>
+          <h3 data-i18n="svc3_title">Desain Kreatif</h3>
+          <p data-i18n="svc3_desc">Identitas visual, UI/UX, dan konten digital untuk memperkuat brand Anda.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-label">03 — <span data-i18n="projects_label">Proyek</span></p>
+      <h2 data-i18n="projects_title">Karya yang sudah berjalan</h2>
+      <div class="projects">
+        <a class="project" href="https://poswarung.my.id" target="_blank" rel="noopener">
+          <div class="project-thumb">
+            <span class="project-initial">POS</span>
+          </div>
+          <div class="project-body">
+            <p class="project-tag" data-i18n="proj1_tag">Software · Aplikasi Kasir</p>
+            <h3>POS Warung</h3>
+            <p data-i18n="proj1_desc">Aplikasi kasir (Point of Sale) berbasis web untuk warung dan UMKM, membantu pencatatan penjualan jadi lebih mudah.</p>
+            <span class="project-link">poswarung.my.id <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <div class="project project-soon">
+          <div class="project-body">
+            <p class="project-tag" data-i18n="soon_tag">Segera Hadir</p>
+            <h3 data-i18n="soon_title">Proyek berikutnya</h3>
+            <p data-i18n="soon_desc">Bisa jadi proyek Anda. Mari wujudkan bersama.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <p class="section-label">04 — <span data-i18n="contact_label">Kontak</span></p>
+      <h2 class="contact-title" data-i18n="contact_title">Punya ide? Ayo ngobrol.</h2>
+      <p data-i18n="contact_desc">Ceritakan kebutuhan Anda, kami bantu temukan solusi digital yang paling pas.</p>
+      <a href="mailto:email@lambarkreatif.id" class="btn btn-dark" data-i18n="contact_cta">Hubungi Kami</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> Lambar Kreatif</span>
+      <span data-i18n="footer_note">Digital Kreatif &amp; Software</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
