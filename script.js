@@ -1,135 +1,81 @@
 $(function () {
+  // Konten terjemahan milik website. HTML digunakan untuk line break, aksen,
+  // dan ikon panah yang sudah ditentukan di file ini.
   var translations = {
     id: {
-      nav_about: 'Tentang',
-      nav_services: 'Layanan',
-      nav_projects: 'Proyek',
-      nav_contact: 'Kontak',
-      hero_eyebrow: 'Studio Digital Kreatif & Software',
-      hero_title_1: 'Ide kreatif,',
-      hero_title_2: 'jadi produk digital',
-      hero_desc: 'Kami membantu bisnis dan UMKM tumbuh lewat desain, website, dan aplikasi yang sederhana, cepat, dan tepat guna.',
-      hero_cta_1: 'Lihat Proyek',
-      hero_cta_2: 'Mulai Kolaborasi',
-      about_label: 'Tentang Kami',
-      about_title: 'Partner digital untuk bisnis yang ingin bergerak lebih cepat.',
-      about_p1: 'Lambar Kreatif adalah startup yang bergerak di bidang digital kreatif dan pengembangan software. Kami menggabungkan desain yang komunikatif dengan teknologi yang andal.',
-      about_p2: 'Dari identitas visual hingga aplikasi web, setiap proyek kami kerjakan dengan fokus pada kebutuhan nyata pengguna.',
-      services_label: 'Layanan',
-      services_title: 'Apa yang kami kerjakan',
-      svc1_title: 'Pengembangan Software',
-      svc1_desc: 'Aplikasi web dan sistem bisnis custom, dari kasir, inventori, hingga dashboard.',
-      svc2_title: 'Website & Landing Page',
-      svc2_desc: 'Website profil perusahaan dan landing page yang cepat dan responsif.',
-      svc3_title: 'Desain Kreatif',
-      svc3_desc: 'Identitas visual, UI/UX, dan konten digital untuk memperkuat brand Anda.',
-      projects_label: 'Proyek',
-      projects_title: 'Karya yang sudah berjalan',
-      proj1_tag: 'Software · Aplikasi Kasir',
-      proj1_desc: 'Aplikasi kasir (Point of Sale) berbasis web untuk warung dan UMKM, membantu pencatatan penjualan jadi lebih mudah.',
-      soon_tag: 'Segera Hadir',
-      soon_title: 'Proyek berikutnya',
-      soon_desc: 'Bisa jadi proyek Anda. Mari wujudkan bersama.',
-      contact_label: 'Kontak',
-      contact_title: 'Punya ide? Ayo ngobrol.',
-      contact_desc: 'Ceritakan kebutuhan Anda, kami bantu temukan solusi digital yang paling pas.',
-      contact_cta: 'Hubungi Kami',
-      footer_note: 'Digital Kreatif & Software'
+      nav_about: 'Tentang', nav_services: 'Layanan', nav_projects: 'Proyek', nav_legal: 'Perusahaan', nav_contact: 'Kontak', nav_cta: 'Ayo ngobrol <span>↗</span>',
+      hero_eyebrow: 'PT Lambar Kreatif Digital', hero_title_1: 'Ide yang', hero_title_2: 'berdampak nyata.', hero_desc: 'Kami mengubah ide besar menjadi brand yang jelas, website yang berguna, dan produk digital andal yang membantu bisnis bergerak lebih cepat.', hero_cta_1: 'Lihat karya kami <span>↗</span>', hero_cta_2: 'Perusahaan resmi <span>↓</span>', hero_proof: 'Badan usaha resmi Indonesia · Metro, Lampung.',
+      about_label: 'Tentang kami', about_title: 'Digital itu harus terasa<br><span>sederhana, bukan biasa.</span>', about_p1: 'PT Lambar Kreatif Digital adalah studio digital dan partner teknologi Indonesia yang berbasis di Kota Metro, Lampung. Kami memadukan desain produk yang tajam dengan engineering software yang andal.', about_p2: 'Dari SaaS custom dan sistem Point of Sale hingga infrastruktur hosting, kami dekat dengan kebutuhan bisnis nyata — membangun software yang menyelesaikan masalah dan berjalan dengan baik.', about_link: 'Lihat kemampuan kami <span>↗</span>', stat_1: 'Sektor KBLI terdaftar', stat_2: 'Resmi &amp; terdaftar', stat_3: 'Dikerjakan dengan teliti',
+      services_label: 'Layanan', services_title: 'Produk bagus dimulai<br>dari <em>pemikiran yang jelas.</em>', services_intro: 'Kami menangani semuanya mulai dari ide, arsitektur sistem, desain visual, hingga deployment hosting — supaya rilis digital Anda siap digunakan.', svc1_title: 'Software &amp;<br>E-Commerce', svc1_desc: 'Aplikasi web custom, Point of Sale, sistem inventori, dan aplikasi perdagangan sesuai operasi bisnis Anda.', svc2_title: 'Cloud &amp;<br>Infrastruktur Hosting', svc2_desc: 'Deployment cloud server, orkestrasi VPS, pendaftaran domain, setup SSL, dan replikasi database high availability.', svc3_title: 'Website &amp;<br>Identitas Brand', svc3_desc: 'Company profile modern, landing page, sistem UI/UX, dan identitas brand yang mudah diingat.',
+      projects_label: 'Karya pilihan', projects_title: 'Beberapa hal<br><span>yang sudah kami buat.</span>', projects_intro: 'Setiap produk punya titik awal berbeda. Tujuannya selalu sama: membuatnya berguna, cepat, dan mudah dipakai setiap hari.', proj1_tag: 'Software · Aplikasi Kasir', proj1_desc: 'Aplikasi kasir berbasis web untuk warung dan UMKM agar pencatatan penjualan, stok, dan keuntungan sehari-hari lebih mudah.', soon_tag: 'Segera hadir', soon_title: 'Software<br>berikutnya?', soon_desc: 'Punya ide atau butuh software custom untuk perusahaan? Mari wujudkan bersama.', soon_link: 'Mulai proyek <b>↗</b>',
+      legal_label: 'Perusahaan &amp; kepercayaan', process_label: 'Cara kerja', process_title: 'Minim ribut.<br><em>Maksimal bergerak.</em>', process_1_title: 'Dengar dulu', process_1_desc: 'Kami memahami konteks, audiens, dan tantangan sebenarnya di balik brief sebelum menulis kode.', process_2_title: 'Buat jelas', process_2_desc: 'Kami ubah hal rumit menjadi arah yang bisa dipahami, diuji, dan dipercaya semua orang.', process_3_title: 'Bangun dengan teliti', process_3_desc: 'Kami menghadirkan kode bersih, hosting andal, dan detail matang — siap untuk penggunaan produksi jangka panjang.',
+      contact_label: 'Kontak', contact_title: 'Punya ide?<br><em>Ayo wujudkan.</em>', contact_desc: 'Ceritakan apa yang sedang Anda bangun. Kami bantu menemukan arsitektur digital yang tepat dan membangunnya bersama Anda.', contact_cta: 'Mulai obrolan <span>↗</span>'
     },
     en: {
-      nav_about: 'About',
-      nav_services: 'Services',
-      nav_projects: 'Projects',
-      nav_contact: 'Contact',
-      hero_eyebrow: 'Creative Digital & Software Studio',
-      hero_title_1: 'Creative ideas,',
-      hero_title_2: 'turned into digital products',
-      hero_desc: 'We help businesses and SMEs grow through design, websites, and applications that are simple, fast, and purposeful.',
-      hero_cta_1: 'View Projects',
-      hero_cta_2: 'Start a Collaboration',
-      about_label: 'About Us',
-      about_title: 'A digital partner for businesses that want to move faster.',
-      about_p1: 'Lambar Kreatif is a startup working in creative digital and software development. We combine communicative design with reliable technology.',
-      about_p2: 'From visual identity to web applications, every project we build is focused on real user needs.',
-      services_label: 'Services',
-      services_title: 'What we do',
-      svc1_title: 'Software Development',
-      svc1_desc: 'Custom web applications and business systems, from point of sale and inventory to dashboards.',
-      svc2_title: 'Websites & Landing Pages',
-      svc2_desc: 'Fast, responsive company profile websites and landing pages.',
-      svc3_title: 'Creative Design',
-      svc3_desc: 'Visual identity, UI/UX, and digital content to strengthen your brand.',
-      projects_label: 'Projects',
-      projects_title: 'Work already live',
-      proj1_tag: 'Software · Point of Sale',
-      proj1_desc: 'A web-based Point of Sale app for small shops and SMEs that makes recording sales easier.',
-      soon_tag: 'Coming Soon',
-      soon_title: 'Next project',
-      soon_desc: 'It could be yours. Let\'s build it together.',
-      contact_label: 'Contact',
-      contact_title: 'Got an idea? Let\'s talk.',
-      contact_desc: 'Tell us what you need, and we\'ll help you find the right digital solution.',
-      contact_cta: 'Contact Us',
-      footer_note: 'Creative Digital & Software'
+      nav_about: 'About', nav_services: 'Services', nav_projects: 'Projects', nav_legal: 'Company', nav_contact: 'Contact', nav_cta: 'Let\'s talk <span>↗</span>',
+      hero_eyebrow: 'PT Lambar Kreatif Digital', hero_title_1: 'Ideas with', hero_title_2: 'real impact.', hero_desc: 'We turn ambitious ideas into clear brands, useful websites, and reliable digital products that help businesses move faster.', hero_cta_1: 'See our work <span>↗</span>', hero_cta_2: 'Verified company <span>↓</span>', hero_proof: 'Registered legal entity in Indonesia · Metro, Lampung.',
+      about_label: 'About us', about_title: 'Digital should feel<br><span>simple, not ordinary.</span>', about_p1: 'PT Lambar Kreatif Digital is an Indonesian digital studio and technology partner based in Kota Metro, Lampung. We bring together sharp product design and dependable software engineering.', about_p2: 'From custom SaaS tools and Point of Sale systems to hosting infrastructure, we stay close to real-world business needs — building software that solves problems and keeps running reliably.', about_link: 'Explore our capabilities <span>↗</span>', stat_1: 'Licensed KBLI sectors', stat_2: 'Legal &amp; registered', stat_3: 'Built with care',
+      services_label: 'Services', services_title: 'Good products start<br>with <em>clear thinking.</em>', services_intro: 'We handle everything from idea, system architecture, visual design, to hosting deployment — so your next digital release is ready for prime time.', svc1_title: 'Software &amp;<br>E-Commerce', svc1_desc: 'Custom web applications, Point of Sale, inventory systems, and transactional commerce apps tailored to your business operations.', svc2_title: 'Cloud &amp;<br>Hosting Infrastructure', svc2_desc: 'Cloud server deployment, VPS orchestration, domain registration, SSL setups, and high-availability database replication.', svc3_title: 'Websites &amp;<br>Brand Identity', svc3_desc: 'Modern, high-converting company profiles, product landing pages, UI/UX systems, and memorable brand identities.',
+      projects_label: 'Selected work', projects_title: 'A few things<br><span>we\'ve made.</span>', projects_intro: 'Every product has a different starting point. The goal is always the same: make it useful, fast, and easy to run every day.', proj1_tag: 'Software · Point of Sale', proj1_desc: 'A web-based Point of Sale app for small shops and SMEs that makes daily sales, stock, and profit recording effortless.', soon_tag: 'Coming soon', soon_title: 'Your next<br>software?', soon_desc: 'Have an idea or need custom software for your company? Let\'s build it together.', soon_link: 'Start a project <b>↗</b>',
+      legal_label: 'Corporate &amp; Trust', process_label: 'Our approach', process_title: 'Less noise.<br><em>More momentum.</em>', process_1_title: 'Listen first', process_1_desc: 'We learn the context, the audience, and the real challenge behind the brief before writing a line of code.', process_2_title: 'Make it clear', process_2_desc: 'We turn complexity into a direction everyone can understand, test, and believe in.', process_3_title: 'Build with care', process_3_desc: 'We ship clean code, dependable hosting, and thoughtful details — built for long-term production use.',
+      contact_label: 'Contact', contact_title: 'Have an idea?<br><em>Let\'s make it real.</em>', contact_desc: 'Tell us what you\'re building. We\'ll help you find the right digital architecture and build it with you.', contact_cta: 'Start a conversation <span>↗</span>'
     }
   };
 
   function getSavedLang() {
-    try {
-      return localStorage.getItem('lang');
-    } catch (e) {
-      return null;
-    }
+    try { return localStorage.getItem('lang'); } catch (e) { return null; }
   }
 
   function setLang(lang) {
     var dict = translations[lang] || translations.en;
-
     $('[data-i18n]').each(function () {
       var key = $(this).data('i18n');
-      if (dict[key]) {
-        $(this).text(dict[key]);
-      }
+      if (dict[key]) $(this).html(dict[key]);
     });
-
     $('html').attr('lang', lang);
     $('.lang-btn').removeClass('active').filter('[data-lang="' + lang + '"]').addClass('active');
-
-    try {
-      localStorage.setItem('lang', lang);
-    } catch (e) {}
+    try { localStorage.setItem('lang', lang); } catch (e) {}
   }
 
-  $('.lang-btn').on('click', function () {
-    setLang($(this).data('lang'));
-  });
+  $('.lang-btn').on('click', function () { setLang($(this).data('lang')); });
+
+  function closeMenu() {
+    $('#burger').removeClass('open').attr('aria-expanded', 'false');
+    $('#menu').removeClass('open');
+  }
 
   $('#burger').on('click', function () {
-    $(this).toggleClass('open');
-    $('#menu').toggleClass('open');
+    var open = $('#menu').toggleClass('open').hasClass('open');
+    $(this).toggleClass('open', open).attr('aria-expanded', open);
   });
-
-  $('#menu a').on('click', function () {
-    $('#burger').removeClass('open');
-    $('#menu').removeClass('open');
-  });
-
+  $('#menu a').on('click', closeMenu);
+  $(document).on('click', function (e) { if (!$(e.target).closest('.nav').length) closeMenu(); });
   $('#year').text(new Date().getFullYear());
 
-  var $reveal = $('.section h2, .service, .project, .grid-2 > div');
+  var $reveal = $('.section-head, .section h2, .services-intro > p, .projects-title-row > p, .about-copy, .stat, .service, .project, .legal-card, .process-item, .contact-inner > *');
   $reveal.addClass('reveal');
 
   function checkReveal() {
-    var bottom = $(window).scrollTop() + $(window).height() * 0.9;
-    $reveal.each(function () {
-      if ($(this).offset().top < bottom) {
-        $(this).addClass('show');
+    var bottom = $(window).scrollTop() + $(window).height() * 0.92;
+    $reveal.not('.show').each(function () {
+      var $el = $(this);
+      if ($el.offset().top < bottom) {
+        $el.addClass('show');
+        setTimeout(function () { $el.removeClass('reveal show'); }, 900);
       }
     });
   }
 
-  $(window).on('scroll resize', checkReveal);
-  checkReveal();
+  var $sections = $('main section[id]');
+  function updateActive() {
+    var pos = $(window).scrollTop() + 140;
+    var current = '';
+    $sections.each(function () { if ($(this).offset().top <= pos) current = this.id; });
+    $('#menu a').each(function () { $(this).toggleClass('active', $(this).attr('href') === '#' + current); });
+  }
 
+  $(window).on('scroll resize', function () { checkReveal(); updateActive(); });
+  checkReveal();
+  updateActive();
   setLang(getSavedLang() || 'en');
 });
