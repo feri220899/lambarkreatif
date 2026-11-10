@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#10151f">
-  <meta name="description" content="PT Lambar Kreatif Digital — Studio digital & software partner di Kota Metro, Lampung. NIB: 2110260117323.">
+  <meta name="description" content="PT Lambar Kreatif Digital — digital studio and software partner in Kota Metro, Lampung. Custom software, cloud &amp; hosting, websites and brand identity.">
   <title>PT Lambar Kreatif Digital — Software, Web &amp; Creative Studio</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
   <header class="nav">
     <div class="container nav-inner">
       <a href="#home" class="logo" aria-label="Lambar Kreatif Digital home">
@@ -27,52 +28,36 @@
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#services" data-i18n="nav_services">Services</a>
         <a href="#projects" data-i18n="nav_projects">Projects</a>
-        <a href="#legal" data-i18n="nav_legal">Company</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
       <div class="nav-actions">
         <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" class="lang-btn" data-lang="id">ID</button>
-          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
         </div>
         <a class="nav-cta" href="https://wa.me/62885121542591" target="_blank" rel="noopener" data-i18n="nav_cta">Let's talk <span>↗</span></a>
-        <button type="button" class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <button type="button" class="burger" id="burger" aria-label="Open menu" aria-controls="menu" aria-expanded="false">
           <span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" id="home">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-orb orb-one" aria-hidden="true"></div>
       <div class="hero-orb orb-two" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow light"><span class="eyebrow-dot"></span><span data-i18n="hero_eyebrow">PT Lambar Kreatif Digital</span></p>
-          <h1><span data-i18n="hero_title_1">Ideas with</span><br><em data-i18n="hero_title_2">real impact.</em></h1>
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero_eyebrow">Software, web &amp; creative studio</span></p>
+        <h1><span data-i18n="hero_title_1">Ideas with</span><br><em data-i18n="hero_title_2">real impact.</em></h1>
+        <div class="hero-foot">
           <p class="hero-desc" data-i18n="hero_desc">We turn ambitious ideas into clear brands, useful websites, and reliable digital products that help businesses move faster.</p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-lime" data-i18n="hero_cta_1">See our work <span>↗</span></a>
-            <a href="#legal" class="text-link light-link" data-i18n="hero_cta_2">Verified company <span>↓</span></a>
-          </div>
-          <div class="hero-proof">
-            <div class="avatar-stack" aria-hidden="true"><span>LK</span><span>✦</span><span>+</span></div>
-            <span data-i18n="hero_proof">Registered legal entity in Indonesia · Metro, Lampung.</span>
+            <a href="#contact" class="text-link light-link" data-i18n="hero_cta_2">Start a project <span>→</span></a>
           </div>
         </div>
-        <aside class="hero-showcase" aria-label="Digital product preview">
-          <div class="showcase-top"><span class="mini-label">PT LAMBAR KREATIF DIGITAL</span><span class="status"><i></i> VERIFIED</span></div>
-          <div class="showcase-art">
-            <div class="art-ring ring-a"></div>
-            <div class="art-ring ring-b"></div>
-            <img src="assets/mark-cream.png" class="art-crown" alt="" width="160" height="108" aria-hidden="true">
-            <div class="art-word">MAKE<br><span>USEFUL</span></div>
-            <div class="art-cursor">↗</div>
-          </div>
-          <div class="showcase-bottom"><span>KBLI 62191 · 63102 · 47403</span><span>Scroll to explore ↓</span></div>
-        </aside>
       </div>
     </section>
 
@@ -84,7 +69,7 @@
       <div class="container">
         <div class="section-head">
           <p class="section-kicker"><span>01</span> <i></i> <span data-i18n="about_label">About us</span></p>
-          <p class="section-index">/ METRO, LAMPUNG</p>
+          <p class="section-index" aria-hidden="true">/ METRO, LAMPUNG</p>
         </div>
         <div class="about-grid">
           <h2 data-i18n="about_title">Digital should feel<br><span>simple, not ordinary.</span></h2>
@@ -106,7 +91,7 @@
       <div class="container">
         <div class="section-head light-head">
           <p class="section-kicker"><span>02</span> <i></i> <span data-i18n="services_label">Services</span></p>
-          <p class="section-index">/ WHAT WE BUILD</p>
+          <p class="section-index" aria-hidden="true">/ WHAT WE BUILD</p>
         </div>
         <div class="services-intro">
           <h2 data-i18n="services_title">Good products start<br>with <em>clear thinking.</em></h2>
@@ -114,19 +99,19 @@
         </div>
         <div class="services">
           <article class="service">
-            <div class="service-top"><span class="service-num">01 · KBLI 62191</span><span class="service-icon">↗</span></div>
+            <div class="service-top"><span class="service-num">01 · KBLI 62191</span><span class="service-icon" aria-hidden="true">↗</span></div>
             <h3 data-i18n="svc1_title">Software &amp;<br>E-Commerce</h3>
             <p data-i18n="svc1_desc">Custom web applications, Point of Sale, inventory systems, and transactional commerce apps tailored to your business operations.</p>
             <span class="service-line"></span>
           </article>
           <article class="service service-featured">
-            <div class="service-top"><span class="service-num">02 · KBLI 63102</span><span class="service-icon">◌</span></div>
+            <div class="service-top"><span class="service-num">02 · KBLI 63102</span><span class="service-icon" aria-hidden="true">◌</span></div>
             <h3 data-i18n="svc2_title">Cloud &amp;<br>Hosting Infrastructure</h3>
             <p data-i18n="svc2_desc">Cloud server deployment, VPS orchestration, domain registration, SSL setups, and high-availability database replication.</p>
             <span class="service-line"></span>
           </article>
           <article class="service">
-            <div class="service-top"><span class="service-num">03 · KBLI 58290</span><span class="service-icon">✦</span></div>
+            <div class="service-top"><span class="service-num">03 · KBLI 58290</span><span class="service-icon" aria-hidden="true">✦</span></div>
             <h3 data-i18n="svc3_title">Websites &amp;<br>Brand Identity</h3>
             <p data-i18n="svc3_desc">Modern, high-converting company profiles, product landing pages, UI/UX systems, and memorable brand identities.</p>
             <span class="service-line"></span>
@@ -139,7 +124,7 @@
       <div class="container">
         <div class="section-head">
           <p class="section-kicker"><span>03</span> <i></i> <span data-i18n="projects_label">Selected work</span></p>
-          <p class="section-index">/ BUILT FOR PEOPLE</p>
+          <p class="section-index" aria-hidden="true">/ BUILT FOR PEOPLE</p>
         </div>
         <div class="projects-title-row">
           <h2 data-i18n="projects_title">A few things<br><span>we've made.</span></h2>
@@ -147,7 +132,7 @@
         </div>
         <div class="projects">
           <a class="project project-main" href="https://poswarung.my.id" target="_blank" rel="noopener">
-            <div class="project-thumb pos-thumb">
+            <div class="project-thumb pos-thumb" aria-hidden="true">
               <div class="pos-window">
                 <div class="pos-window-top"><span></span><span></span><span></span><b>POS WARUNG</b></div>
                 <div class="pos-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -157,63 +142,32 @@
             </div>
             <div class="project-body"><p class="project-tag" data-i18n="proj1_tag">Software · Point of Sale</p><h3>POS Warung</h3><p data-i18n="proj1_desc">A web-based Point of Sale app for small shops and SMEs that makes daily sales, stock, and profit recording effortless.</p><span class="project-link">poswarung.my.id <b>↗</b></span></div>
           </a>
+          <a class="project project-main" href="https://barracudahost.com" target="_blank" rel="noopener">
+            <div class="project-thumb host-thumb" aria-hidden="true">
+              <div class="pos-window host-window">
+                <div class="pos-window-top"><span></span><span></span><span></span><b>BARRACUDA HOST</b></div>
+                <div class="host-console">
+                  <code>$ ssh root@vm-01</code>
+                  <span>Ubuntu 24.04 · 2 vCPU · 4 GB</span>
+                  <b>● active · 99.9% uptime</b>
+                </div>
+                <div class="pos-value">Rp 42.000/mo <small>READY</small></div>
+              </div>
+              <span class="thumb-label">LIVE / 2026</span>
+            </div>
+            <div class="project-body"><p class="project-tag" data-i18n="proj2_tag">Cloud · VPS &amp; Domain</p><h3>Barracuda Host</h3><p data-i18n="proj2_desc">Fast, reliable VPS hosting and domain platform with automatic deployment, full root access, and an in-browser console.</p><span class="project-link">barracudahost.com <b>↗</b></span></div>
+          </a>
           <div class="project project-soon">
-            <div class="soon-shape">✦</div>
+            <div class="soon-shape" aria-hidden="true">✦</div>
             <div class="project-body"><p class="project-tag" data-i18n="soon_tag">Coming soon</p><h3 data-i18n="soon_title">Your next<br>software?</h3><p data-i18n="soon_desc">Have an idea or need custom software for your company? Let's build it together.</p><a href="#contact" class="project-link" data-i18n="soon_link">Start a project <b>↗</b></a></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section Legalitas Perusahaan -->
-    <section class="section legal-section" id="legal">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker"><span>04</span> <i></i> <span data-i18n="legal_label">Corporate &amp; Trust</span></p>
-          <p class="section-index">/ LEGAL IDENTITY</p>
-        </div>
-        <div class="legal-card">
-          <div class="legal-badge">
-            <span class="legal-seal"><img src="assets/mark-blue.png" alt="" width="56" height="38" aria-hidden="true"></span>
-            <div>
-              <p class="legal-status">TERDAFTAR &amp; DIAKUI NEGARA</p>
-              <h3>PT LAMBAR KREATIF DIGITAL</h3>
-              <p class="legal-sub">Perseroan Perorangan · SK Kemenkumham RI</p>
-            </div>
-          </div>
-          <div class="legal-items">
-            <div class="legal-item">
-              <span class="legal-item-label">SK Kemenkumham RI</span>
-              <strong>AHU-A016061.AH.01.31.Tahun 2026</strong>
-              <small>Direktorat Jenderal Administrasi Hukum Umum</small>
-            </div>
-            <div class="legal-item">
-              <span class="legal-item-label">Nomor Induk Berusaha (NIB)</span>
-              <strong>2110260117323</strong>
-              <small>Kementerian Investasi &amp; Hilirisasi / BKPM RI</small>
-            </div>
-            <div class="legal-item">
-              <span class="legal-item-label">NPWP Perusahaan (16 Digit)</span>
-              <strong>1000 0000 1150 7978</strong>
-              <small>KPP Pratama Metro · Kanwil DJP Bengkulu &amp; Lampung</small>
-            </div>
-            <div class="legal-item">
-              <span class="legal-item-label">Klasifikasi Bidang Usaha (KBLI)</span>
-              <strong>62191 · 63102 · 62199 · 58290 · 47403</strong>
-              <small>E-Commerce, Hosting/Cloud, Pemrograman &amp; Software</small>
-            </div>
-          </div>
-          <div class="legal-address">
-            <span class="addr-label">📍 Domisili &amp; Kantor Resmi:</span>
-            <span>Jl. Flores 1/1, RT 001 / RW 001, Kel. Ganjar Asri, Kec. Metro Barat, Kota Metro, Lampung 34125</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process-section">
+    <section class="section process-section" id="process">
       <div class="container process-grid">
-        <div><p class="section-kicker"><span>05</span> <i></i> <span data-i18n="process_label">Our approach</span></p><h2 data-i18n="process_title">Less noise.<br><em>More momentum.</em></h2></div>
+        <div><p class="section-kicker"><span>04</span> <i></i> <span data-i18n="process_label">Our approach</span></p><h2 data-i18n="process_title">Less noise.<br><em>More momentum.</em></h2></div>
         <div class="process-list">
           <div class="process-item"><span>01</span><div><h3 data-i18n="process_1_title">Listen first</h3><p data-i18n="process_1_desc">We learn the context, the audience, and the real challenge behind the brief before writing a line of code.</p></div></div>
           <div class="process-item"><span>02</span><div><h3 data-i18n="process_2_title">Make it clear</h3><p data-i18n="process_2_desc">We turn complexity into a direction everyone can understand, test, and believe in.</p></div></div>
@@ -225,14 +179,14 @@
     <section class="contact" id="contact">
       <div class="contact-grid" aria-hidden="true"></div>
       <div class="container contact-inner">
-        <p class="section-kicker light-kicker"><span>06</span> <i></i> <span data-i18n="contact_label">Contact</span></p>
+        <p class="section-kicker light-kicker"><span>05</span> <i></i> <span data-i18n="contact_label">Contact</span></p>
         <h2 data-i18n="contact_title">Have an idea?<br><em>Let's make it real.</em></h2>
         <p data-i18n="contact_desc">Tell us what you're building. We'll help you find the right digital architecture and build it with you.</p>
         <a href="https://wa.me/6285767044845" target="_blank" rel="noopener" class="btn btn-lime" data-i18n="contact_cta">Start a conversation <span>↗</span></a>
         <div class="contact-meta">
-          <span>📧 lampungbaratkreatif@lambardigital.com</span>
-          <span>💬 WhatsApp: +62 857-6704-4845</span>
-          <span>📍 Kota Metro, Lampung, Indonesia</span>
+          <a href="mailto:lampungbaratkreatif@lambardigital.com">lampungbaratkreatif@lambardigital.com</a>
+          <a href="https://wa.me/6285767044845" target="_blank" rel="noopener">WhatsApp +62 857-6704-4845</a>
+          <span>Kota Metro, Lampung, Indonesia</span>
         </div>
       </div>
     </section>
@@ -244,8 +198,8 @@
         <img src="assets/mark-lime.png" alt="" width="20" height="14" aria-hidden="true">
         <span>PT LAMBAR KREATIF DIGITAL</span>
       </a>
-      <span>© <span id="year"></span> PT Lambar Kreatif Digital · NIB 2110260117323</span>
-      <a href="#home" class="back-top">Back to top ↑</a>
+      <span>© <span id="year"></span> PT Lambar Kreatif Digital</span>
+      <a href="#home" class="back-top" data-i18n="back_top">Back to top ↑</a>
     </div>
   </footer>
 
